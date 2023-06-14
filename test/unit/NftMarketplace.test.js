@@ -7,7 +7,7 @@ const {developmentChains} = require("../../helper-hardhat-config")
     const Price = ethers.utils.parseEther("0.1")
     const TokenId = 0
     beforeEach(async function(){
-        deployer = await getNamedAccounts().deployer;
+        deployer = (await getNamedAccounts()).deployer
         // player = await getNamedAccounts().player
         const accounts = await ethers.getSigners()
         player = accounts[1]
